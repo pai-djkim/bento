@@ -10,4 +10,4 @@ spec:
       ports:
         - containerPort: 80
   imagePullSecrets:
-    - name: bentosecret
+    - name: dockerhub-secret

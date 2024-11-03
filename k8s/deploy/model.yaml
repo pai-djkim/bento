@@ -9,5 +9,3 @@ spec:
       image: paidjkim/bento:latest
       ports:
         - containerPort: 80
-  imagePullSecrets:
-    - name: dockerhub-secret

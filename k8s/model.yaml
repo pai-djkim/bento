@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: bento
-          image: paidjkim/bento:latest
+          image: paidjkim/bento:tagname
           imagePullPolicy: Always
           ports:
             - containerPort: 80

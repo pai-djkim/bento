@@ -1,4 +1,4 @@
-service: "service:Summarization"
+service: "service:TextClassification"
 labels:
   project: quickstart
   stage: dev
@@ -8,5 +8,6 @@ python:
   packages:
   - torch
   - transformers
+  - numpy
 docker:
-  python_version: "3.10"
+  python_version: "3.9"

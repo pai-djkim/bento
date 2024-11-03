@@ -1,11 +1,22 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: bento
   namespace: bento
 spec:
-  containers:
-    - name: bento
-      image: paidjkim/bento:latest
-      ports:
-        - containerPort: 80
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bento
+  template:
+    metadata:
+      labels:
+        app: bento
+    spec:
+      containers:
+        - name: bento
+          image: paidjkim/bento:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
